@@ -16,12 +16,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package allelementsintwobstree;
+package commons;
 
 public class TreeNode {
-  int val;
-  TreeNode left;
-  TreeNode right;
+  public int val;
+  public TreeNode left;
+  public TreeNode right;
 
   TreeNode() {}
 

@@ -18,6 +18,8 @@
  */
 package allelementsintwobstree;
 
+import commons.TreeNode;
+
 import java.util.LinkedList;
 import java.util.List;
 
