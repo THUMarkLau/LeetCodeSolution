@@ -25,7 +25,7 @@ public class TreeNode {
 
   TreeNode() {}
 
-  TreeNode(int val) {
+  public TreeNode(int val) {
     this.val = val;
   }
 
@@ -33,5 +33,24 @@ public class TreeNode {
     this.val = val;
     this.left = left;
     this.right = right;
+  }
+
+  public static TreeNode buildTree(int[] values) {
+    TreeNode root = null;
+    TreeNode[] nodes = new TreeNode[values.length];
+    for (int i = 0; i < values.length; ++i) {
+      if (root == null) {
+        root = new TreeNode(values[i]);
+        nodes[i] = root;
+      } else {
+        nodes[i] = new TreeNode(values[i]);
+        if (i % 2 == 0) {
+          nodes[i / 2 - 1].right = nodes[i];
+        } else {
+          nodes[(i - 1) / 2].left = nodes[i];
+        }
+      }
+    }
+    return root;
   }
 }
